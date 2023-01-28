@@ -16,9 +16,4 @@ public class Utils {
         return listOfNumbers.size() == args.size();
         //magic happens here
     }
-
-    public static void main(String[] args) {
-        List<String> testList = List.of ("92", "12", "14", "123");
-        boolean result = isAllPositiveNumbers(testList);
-    }
 }
