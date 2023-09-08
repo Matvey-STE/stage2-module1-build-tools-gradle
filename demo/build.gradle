@@ -1,6 +1,7 @@
 plugins {
     id 'maven-publish'
     id 'java-library'
+    id 'java'
 }
 
 java {
@@ -9,12 +10,16 @@ java {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 dependencies {
     implementation project(':utils')
 }
 
 //add everything here
+group 'com.example.demo' // Set your desired group ID
+version '1.0.0'
+
 
 test {
     useJUnitPlatform()

@@ -1,17 +1,19 @@
 package com.epam.demo;
 
-import java.util.ArrayList;
+import com.epam.utils.StringUtils;
+
 import java.util.List;
 
 public class Utils {
+    private Utils() {
+        throw new AssertionError();
+    }
     public static boolean isAllPositiveNumbers(List<String> args) {
-        List<String> listOfNumbers = new ArrayList<>();
-        for (String element : args){
-            if (Integer.parseInt(element) > 0){
-                listOfNumbers.add(element);
+        for (String str : args) {
+            if (!StringUtils.isPositiveNumber(str)) {
+                return false;
             }
         }
-        return listOfNumbers.size() == args.size();
-        //magic happens here
+        return true; // All strings are positive numbers
     }
 }
